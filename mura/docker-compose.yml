@@ -1,0 +1,47 @@
+version: '2.1'
+
+services:
+  #Mura Server
+  mura:
+    build: .
+    environment:
+        MURA_ADMIN_USERNAME: admin
+        MURA_ADMIN_PASSWORD: admin
+        MURA_ADMINEMAIL: example@localhost.com
+        MURA_APPRELOADKEY: appreload
+        MURA_DATASOURCE: muradb
+        MURA_DATABASE: muradb
+        MURA_DBTYPE: mysql
+        MURA_DBUSERNAME: root
+        MURA_DBPASSWORD: NOT_SECURE_CHANGE
+        MURA_DBHOST: mura_mysql
+        MURA_DBPORT: 3306
+        MURA_SITEIDINURLS: "false"
+        MURA_INDEXFILEINURLS: "false"
+        MURA_ADMINDOMAIN: "localhost"
+        MURA_EXTERNALCONFIG: "http://host.docker.internal:4200/assets/mura.config.json"
+        MURA_DEFAULTTHEMEURL: "https://github.com/blueriver/MuraMinimal/archive/master.zip"
+    volumes:
+        # -   ../../7.1/core:/var/www/core
+        -   ng_sites_data:/var/www/sites
+        -   ng_themes_data:/var/www/themes
+        -   ng_plugins_data:/var/www/plugins
+    ports:
+        - "8888:8888"
+
+  #MySQL
+  mura_mysql:
+    image: mysql:5.7
+    environment:
+        MYSQL_ROOT_PASSWORD: NOT_SECURE_CHANGE
+        MYSQL_DATABASE: muradb
+    volumes:
+        - ng_mysql_data:/var/lib/mysql
+    ports:
+        - "55555:3306"
+
+volumes:
+    ng_mysql_data:
+    ng_sites_data:
+    ng_themes_data:
+    ng_plugins_data:
