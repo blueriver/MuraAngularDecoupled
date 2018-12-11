@@ -10,7 +10,6 @@ import Mura from  'mura.js'
   styles: []
 })
 export class ExampleComponent {
-	name:string="";
 
 	private context:object={object:"missing"};
 
