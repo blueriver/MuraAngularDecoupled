@@ -19,7 +19,6 @@ export class ExampleComponent {
 			()=>{
 				this.context=Mura(this.hostElement.nativeElement).closest('.mura-async-object').data()
 				this.changeDetectorRef.detectChanges();
-				this.changeDetectorRef.reattach();
 			},
 			1
 		);
@@ -27,6 +26,6 @@ export class ExampleComponent {
 	}
 
 	ngOnInit(){
-		this.context=Mura(this.hostElement.nativeElement).closest('.mura-async-object').data()
+		this.context=Mura(this.hostElement.nativeElement).closest('.mura-async-object').data();
 	}
 }
