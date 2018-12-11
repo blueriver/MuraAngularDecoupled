@@ -14,6 +14,10 @@ export class ExampleComponent {
 	private context:object={object:"missing"};
 
 	constructor(private hostElement: ElementRef, private changeDetectorRef: ChangeDetectorRef,){
+		this.updateContext();
+	}
+
+	updateContext(){
 		setTimeout(
 			()=>{
 				this.context=Mura(this.hostElement.nativeElement).closest('.mura-async-object').data()
@@ -21,10 +25,9 @@ export class ExampleComponent {
 			},
 			1
 		);
-
 	}
-
+	
 	ngOnInit(){
-		this.context=Mura(this.hostElement.nativeElement).closest('.mura-async-object').data();
+		this.updateContext();
 	}
 }
