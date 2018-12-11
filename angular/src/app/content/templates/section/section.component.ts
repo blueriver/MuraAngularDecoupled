@@ -1,17 +1,17 @@
-import { Input Inject, Component, OnInit } from '@angular/core';
+import { Input, Inject, Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { MuraService } from '../../../mura.service';
 import { HeaderComponent } from '../inc/header/header.component';
 import { FooterComponent } from '../inc/footer/footer.component';
+import { DefaultTemplateComponent } from '../inc/default/default.component';
 
 @Component({
-  selector: 'default-template',
-  templateUrl: './default.component.html',
-  styleUrls: [ './default.component.css' ]
+  selector: 'section-template',
+  templateUrl: './section.component.html',
+  styleUrls: [ './section.component.css' ]
 })
-export class DefaultTemplateComponent {
-
+export class SectionTemplateComponent implements DefaultTemplateComponent  {
 	@Input() content:object;
 
 	constructor( private muraService:MuraService) {
@@ -36,5 +36,4 @@ export class DefaultTemplateComponent {
 		Mura.init(this.content.get('config'));
 		Mura('#html-queue').hide().html(this.content.get('htmlheadqueue') + this.content.get('htmlfootqueue')).show();
 	}
-
 }

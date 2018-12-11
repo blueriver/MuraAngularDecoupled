@@ -1,7 +1,7 @@
 {
 	"global":{
 		"rendererProperties":{
-			"templateArray":["Default"],
+			"templateArray":["Default","Section"],
 			"hashurls":true
 		},
 		"modules":{

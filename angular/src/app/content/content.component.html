@@ -1,7 +1,4 @@
-<div>
-  <h2>{{content.title}}</h2>
+<div *ngIf="content" [ngSwitch]="content.get('template')">
+	<section-template *ngSwitchCase="'Section'" [content]="content"></section-template>
+	<default-template *ngSwitchDefault [content]="content"></default-template>
 </div>
-<div id="content-body"></div>
-<div class="mura-async-object" data-object="example" data-render="client"></div>
-<div class="mura-region-container" data-region="maincontent"></div>
-<div id="html-queue"></div>

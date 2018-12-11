@@ -1,8 +1,9 @@
-import { Inject, Component, OnInit } from '@angular/core';
+import { Input, Inject, Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { MuraService } from '../mura.service';
 import { DefaultTemplateComponent } from './templates/default/default.component';
+import { SectionTemplateComponent } from './templates/section/section.component';
 
 @Component({
   selector: 'app-content',
@@ -11,13 +12,7 @@ import { DefaultTemplateComponent } from './templates/default/default.component'
 })
 export class ContentComponent implements OnInit {
 
-	public content={
-		title:'',
-		body:'',
-		template:'',
-		htmlheadqueue:'',
-		htmlfootqueue:''
-	};
+	content:any;
 
   constructor(
     private route: ActivatedRoute,
@@ -35,20 +30,7 @@ export class ContentComponent implements OnInit {
 			this.muraService.getInstance().getQueryStringParams()
 		).then(
 			(rendered) => {
-				this.content.title=rendered.get('title');
-
-				Mura('.mura-region-container').each(
-				(region)=>{
-						region=Mura(region);
-						region.html(
-							rendered.renderDisplayRegion(region.data('region'))
-						)
-					}
-				)
-
-				Mura('#content-body').html(rendered.get('body'));
-				Mura.init(rendered.get('config'));
-				Mura('#html-queue').hide().html(rendered.get('htmlheadqueue') + rendered.get('htmlfootqueue')).show();
+				this.content=rendered;
 			}
 		);
 

@@ -6,19 +6,19 @@ import {TransferHttpCacheModule} from '@nguniversal/common';
 import {ContentComponent} from './content/content.component';
 import {MuraService} from './mura.service';
 import {DefaultTemplateComponent} from './content/templates/default/default.component';
+import {SectionTemplateComponent} from './content/templates/section/section.component';
 import {FooterComponent} from './content/templates/inc/footer/footer.component';
 import {HeaderComponent} from './content/templates/inc/header/header.component';
 import {SafePipe} from './pipes/safe.pipe';
-
 import {ExampleComponent} from './example.component';
 import {DomService} from './dom.service';
-import {ContentResolver} from './content.resolver';
 
 @NgModule({
   declarations: [
     AppComponent,
 		ContentComponent,
 		DefaultTemplateComponent,
+		SectionTemplateComponent,
 		HeaderComponent,
 		FooterComponent,
 		ExampleComponent,
@@ -33,7 +33,7 @@ import {ContentResolver} from './content.resolver';
     ]),
     TransferHttpCacheModule
   ],
-  providers: [MuraService,DomService,ContentResolver],
+  providers: [MuraService,DomService],
   bootstrap: [AppComponent],
 	entryComponents:[ExampleComponent]
 })
