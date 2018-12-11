@@ -27,7 +27,7 @@ export class ContentComponent implements OnInit {
 
 	}
 
-  async ngOnInit() {
+  ngOnInit() {
 		const Mura=this.muraService.getInstance();
 
 		Mura.renderFilename(

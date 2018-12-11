@@ -11,7 +11,7 @@ import { FooterComponent } from '../inc/footer/footer.component';
   templateUrl: './default.component.html',
   styleUrls: [ './default.component.css' ]
 })
-export class DefaultTemplateComponent extends ContentComponent {
+export class DefaultTemplateComponent {
 
 
 }

@@ -25,7 +25,7 @@ export class MuraService {
 
 		const domServiceRef=this.domService;
 
-		Mura.Module.example=Mura.UI.extend(
+		Mura.Module.Example=Mura.UI.extend(
 			{
 				render:function(){
 					domServiceRef.appendComponent(this.context.targetEl,ExampleComponent);
