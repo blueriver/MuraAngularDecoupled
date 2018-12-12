@@ -37,7 +37,7 @@ You can now visit the site at http://localhost:4200
 
 And finally go to your Mura admin (http://localhost:8888/admin) and reload Mura one more to and it will see the mura.config.json from the ./angular directory.
 
-# Key Points of Integrations with Mura
+# Key Points of Integration with Mura
 
 The intergration is entirely done with Mura.js installed as an npm within the and project while running Mura's official docker container.
 
