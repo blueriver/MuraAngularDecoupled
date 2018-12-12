@@ -4,13 +4,14 @@ import {ChangeDetectorRef,Component,ElementRef} from '@angular/core';
 @Component({
   selector: 'example',
   template: `
-  <h3>{{context.object}}</h3>
+  <h3 *ngIf="context.myvar">{{context.myvar}}</h3>
+	<h3 *ngIf="!context.myvar">Enter example variable in configurator</h3>
   `,
   styles: []
 })
 
 export class ExampleComponent {
-	private context:object={object:"missing"};
+	private context:object={myvar:"test"};
 
 	Mura:any;
 
@@ -20,7 +21,7 @@ export class ExampleComponent {
 		//private muraService: MuraService
 	){
 		this.Mura=window.Mura;
-		
+
 		//This is a dynamically added component that does not support Angular life cycle events
 		setTimeout(
 			()=>{
