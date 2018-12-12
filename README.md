@@ -41,6 +41,10 @@ And finally go to your Mura admin (http://localhost:8888/admin) and reload Mura 
 
 The intergration is entirely done with Mura.js installed as an npm within the and project while running Mura's official docker container.
 
+## Mura Version
+
+You must use Mura 7.1.323 of higher
+
 ## NPM
 https://www.npmjs.com/package/mura.js
 
