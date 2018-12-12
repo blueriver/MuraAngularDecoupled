@@ -12,11 +12,15 @@ import {ChangeDetectorRef,Component,ElementRef} from '@angular/core';
 export class ExampleComponent {
 	private context:object={object:"missing"};
 
+	Mura:any;
+
 	constructor(
 		private hostElement: ElementRef,
 		private changeDetectorRef: ChangeDetectorRef,
 		//private muraService: MuraService
 	){
+		this.Mura=window.Mura;
+		
 		//This is a dynamically added component that does not support Angular life cycle events
 		setTimeout(
 			()=>{

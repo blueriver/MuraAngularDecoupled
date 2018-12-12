@@ -16,7 +16,7 @@ export class MuraService {
 				rootpath:"http://localhost:8888",
 				siteid:"default",
 				queueObjects:false,
-				processMarkup:true
+				processMarkup:false
 			});
 
 		Mura.loader()
