@@ -53,6 +53,10 @@ You tell Mura about it as an environment variable
 
 https://github.com/blueriver/MuraAngularDecoupled/blob/master/mura/docker-compose.yml#L22
 
+When Angular starts up is get's copied to the public /assets Directory
+
+https://github.com/blueriver/MuraAngularDecoupled/tree/master/angular/src/assets
+
 Mura.js is initialized from within the mura.service file that also wires in any custom modules
 
 https://github.com/blueriver/MuraAngularDecoupled/blob/master/angular/src/app/mura.service.ts
