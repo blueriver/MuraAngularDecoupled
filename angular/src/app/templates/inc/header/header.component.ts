@@ -20,12 +20,12 @@ export class HeaderComponent {
 		this.Mura.getFeed('content')
 		.where()
 		.prop('parentid').isEQ('00000000000000000000000000000000001')
-		.orProp('contentid').isEQ('00000000000000000000000000000000001')
-		.includeHomepage(1)
 		.sort('orderno')
 		.getQuery()
 		.then(collection=>{
-			this.primaryNav=collection.getAll().items;
+			let tempArray=collection.getAll().items;
+			tempArray.unshift({url:"/",menutitle:"Home"});
+			this.primaryNav=tempArray;
 		});
 	}
 }
