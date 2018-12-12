@@ -1,5 +1,5 @@
 FROM blueriver/muracms:latest
-MAINTAINER Eddie Ballisty, eddie.ballisty@blueriver.com
+MAINTAINER Matt Levine, matt.levine@blueriver.com
 
 RUN apt-get update && apt-get install -y --no-install-recommends openssh-client
 
