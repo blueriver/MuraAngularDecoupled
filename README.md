@@ -56,3 +56,7 @@ https://github.com/blueriver/MuraAngularDecoupled/blob/master/mura/docker-compos
 Mura.js is initialized from within the mura.service file that also wires in any custom modules
 
 https://github.com/blueriver/MuraAngularDecoupled/blob/master/angular/src/app/mura.service.ts
+
+# Key Points About Angular
+
+This demonstration project does not currently support prerendering or ssr. 
