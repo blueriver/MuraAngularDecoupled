@@ -39,6 +39,15 @@ And finally go to your Mura admin (http://localhost:8888/admin) and reload Mura 
 
 # Key Points of Integrations with Mura
 
+The intergration is entirely done with Mura.js installed as an npm within the and project
+
+NPM
+https://www.npmjs.com/package/mura.js
+
+Mura.js documentation
+https://docs.getmura.com/v7-1/mura-developers/mura-rendering/murajs/
+
+
 With this use case Mura modules, templates and content type includes are now located outside of Mura within the client.
 
 https://github.com/blueriver/MuraAngularDecoupled/tree/master/angular/src/app/contenttypes/default
