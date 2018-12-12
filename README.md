@@ -39,7 +39,7 @@ And finally go to your Mura admin (http://localhost:8888/admin) and reload Mura 
 
 # Key Points of Integrations with Mura
 
-The intergration is entirely done with Mura.js installed as an npm within the and project
+The intergration is entirely done with Mura.js installed as an npm within the and project while running Mura's official docker container.
 
 ## NPM
 https://www.npmjs.com/package/mura.js
@@ -47,6 +47,10 @@ https://www.npmjs.com/package/mura.js
 ## Mura.js documentation
 
 https://docs.getmura.com/v7-1/mura-developers/mura-rendering/murajs/
+
+## Docker Image
+
+https://hub.docker.com/r/blueriver/muracms/
 
 ## Theming
 
