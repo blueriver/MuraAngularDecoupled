@@ -1,17 +1,16 @@
 import { Input, Inject, Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
-import { MuraService } from '../../../mura.service';
+import { MuraService } from '../../mura.service';
 import { HeaderComponent } from '../inc/header/header.component';
 import { FooterComponent } from '../inc/footer/footer.component';
-import { DefaultTemplateComponent } from '../inc/default/default.component';
 
 @Component({
-  selector: 'section-template',
-  templateUrl: './section.component.html',
-  styleUrls: [ './section.component.css' ]
+  selector: 'alternate-template',
+  templateUrl: './alternate.component.html',
+  styleUrls: [ './alternate.component.css' ]
 })
-export class SectionTemplateComponent implements DefaultTemplateComponent  {
+export class AlternateTemplateComponent  {
 	@Input() content:object;
 
 	constructor( private muraService:MuraService) {

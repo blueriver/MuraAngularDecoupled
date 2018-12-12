@@ -1,6 +1,5 @@
 import {ChangeDetectorRef,Component,ElementRef} from '@angular/core';
-
-import Mura from  'mura.js'
+//import { MuraService } from '../mura.service';
 
 @Component({
   selector: 'example',
@@ -9,10 +8,15 @@ import Mura from  'mura.js'
   `,
   styles: []
 })
+
 export class ExampleComponent {
 	private context:object={object:"missing"};
 
-	constructor(private hostElement: ElementRef, private changeDetectorRef: ChangeDetectorRef){
+	constructor(
+		private hostElement: ElementRef,
+		private changeDetectorRef: ChangeDetectorRef,
+		//private muraService: MuraService
+	){
 		//This is a dynamically added component that does not support Angular life cycle events
 		setTimeout(
 			()=>{

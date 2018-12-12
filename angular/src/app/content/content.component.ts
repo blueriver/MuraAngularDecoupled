@@ -2,8 +2,8 @@ import { Input, Inject, Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { MuraService } from '../mura.service';
-import { DefaultTemplateComponent } from './templates/default/default.component';
-import { SectionTemplateComponent } from './templates/section/section.component';
+import { DefaultTemplateComponent } from '../templates/default/default.component';
+import { AlternateTemplateComponent } from '../templates/alternate/alternate.component';
 
 @Component({
   selector: 'app-content',

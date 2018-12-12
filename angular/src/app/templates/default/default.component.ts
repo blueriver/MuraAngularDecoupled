@@ -1,7 +1,7 @@
 import { Input Inject, Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
-import { MuraService } from '../../../mura.service';
+import { MuraService } from '../../mura.service';
 import { HeaderComponent } from '../inc/header/header.component';
 import { FooterComponent } from '../inc/footer/footer.component';
 

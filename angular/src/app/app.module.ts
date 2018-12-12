@@ -5,12 +5,12 @@ import {AppComponent} from './app.component';
 import {TransferHttpCacheModule} from '@nguniversal/common';
 import {ContentComponent} from './content/content.component';
 import {MuraService} from './mura.service';
-import {DefaultTemplateComponent} from './content/templates/default/default.component';
-import {SectionTemplateComponent} from './content/templates/section/section.component';
-import {FooterComponent} from './content/templates/inc/footer/footer.component';
-import {HeaderComponent} from './content/templates/inc/header/header.component';
+import {DefaultTemplateComponent} from './templates/default/default.component';
+import {AlternateTemplateComponent} from './templates/alternate/alternate.component';
+import {FooterComponent} from './templates/inc/footer/footer.component';
+import {HeaderComponent} from './templates/inc/header/header.component';
 import {SafePipe} from './pipes/safe.pipe';
-import {ExampleComponent} from './example.component';
+import {ExampleComponent} from './modules/example/example.component';
 import {DomService} from './dom.service';
 
 @NgModule({
@@ -18,7 +18,7 @@ import {DomService} from './dom.service';
     AppComponent,
 		ContentComponent,
 		DefaultTemplateComponent,
-		SectionTemplateComponent,
+		AlternateTemplateComponent,
 		HeaderComponent,
 		FooterComponent,
 		ExampleComponent,

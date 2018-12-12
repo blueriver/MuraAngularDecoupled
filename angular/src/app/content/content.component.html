@@ -1,4 +1,4 @@
 <div *ngIf="content" [ngSwitch]="content.get('template')">
-	<section-template *ngSwitchCase="'Section'" [content]="content"></section-template>
+	<!--<other-template *ngSwitchCase="'Other'" [content]="content"></section-other>-->
 	<default-template *ngSwitchDefault [content]="content"></default-template>
 </div>

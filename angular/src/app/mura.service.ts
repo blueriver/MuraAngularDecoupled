@@ -1,6 +1,6 @@
 import { Inject, Injectable, Optional } from '@angular/core';
 import { DomService } from './dom.service';
-import { ExampleComponent } from './example.component';
+import { ExampleComponent } from './modules/example/example.component';
 
 import Mura from 'mura.js';
 
@@ -16,7 +16,7 @@ export class MuraService {
 				rootpath:"http://localhost:8888",
 				siteid:"default",
 				queueObjects:false,
-				processMarkup:false
+				processMarkup:true
 			});
 
 		Mura.loader()
