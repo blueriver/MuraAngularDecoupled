@@ -2,7 +2,7 @@
 	"global":{
 		"rendererProperties":{
 			"templateArray":["Default"],
-			"hashurls":true
+			"hashurls":false
 		},
 		"modules":{
 			"example":{

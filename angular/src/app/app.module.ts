@@ -7,6 +7,7 @@ import {ContentComponent} from './content/content.component';
 import {MuraService} from './mura.service';
 import {DefaultTemplateComponent} from './templates/default/default.component';
 import {AlternateTemplateComponent} from './templates/alternate/alternate.component';
+import {DefaultContentTypeTemplateComponent} from './contenttypes/default/default.component';
 import {FooterComponent} from './templates/inc/footer/footer.component';
 import {HeaderComponent} from './templates/inc/header/header.component';
 import {SafePipe} from './pipes/safe.pipe';
@@ -19,6 +20,7 @@ import {DomService} from './dom.service';
 		ContentComponent,
 		DefaultTemplateComponent,
 		AlternateTemplateComponent,
+		DefaultContentTypeTemplateComponent,
 		HeaderComponent,
 		FooterComponent,
 		ExampleComponent,

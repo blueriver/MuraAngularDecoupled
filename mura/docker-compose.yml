@@ -22,7 +22,7 @@ services:
         MURA_EXTERNALCONFIG: "http://host.docker.internal:4200/assets/mura.config.json"
         MURA_DEFAULTTHEMEURL: "https://github.com/blueriver/MuraMinimal/archive/master.zip"
     volumes:
-        # -   ../../7.1/core:/var/www/core
+        -   ../../7.1/core:/var/www/core
         -   ng_sites_data:/var/www/sites
         -   ng_themes_data:/var/www/themes
         -   ng_plugins_data:/var/www/plugins

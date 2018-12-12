@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { MuraService } from '../../mura.service';
 import { HeaderComponent } from '../inc/header/header.component';
 import { FooterComponent } from '../inc/footer/footer.component';
+import { DefaultContentTypeTemplateComponent } from '../../contenttypes/default/default.component';
 
 @Component({
   selector: 'default-template',
@@ -31,8 +32,7 @@ export class DefaultTemplateComponent {
 				)
 			}
 		)
-
-		Mura('#content-body').html(	this.content.get('body'));
+		
 		Mura.init(this.content.get('config'));
 		Mura('#html-queue').hide().html(this.content.get('htmlheadqueue') + this.content.get('htmlfootqueue')).show();
 	}

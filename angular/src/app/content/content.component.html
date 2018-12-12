@@ -1,3 +1,8 @@
+<!--
+	This should route to the template select in the Mura UI.
+	You can set the available templates in the UI by editing the ../../mura.config.json
+	templateArray variable and restarting angular and reload Mura.
+-->
 <div *ngIf="content" [ngSwitch]="content.get('template')">
 	<!--<other-template *ngSwitchCase="'Other'" [content]="content"></section-other>-->
 	<default-template *ngSwitchDefault [content]="content"></default-template>

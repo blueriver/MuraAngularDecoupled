@@ -1,5 +1,12 @@
 <header-template [content]="content"></header-template>
-<div id="content-body"></div>
-<div class="mura-region-container" data-region="maincontent"></div>
-<div id="html-queue"></div>
+
+<!--
+	This should route to the content type if as setting in Mura content and class extension UI.
+-->
+
+<div *ngIf="content" [ngSwitch]="content.get('type') + content.get('subtype')">
+	<!--<pagewidget-contenttype-template *ngSwitchCase="'PageWidget'" [content]="content"></pagewidget-contenttype-template>-->
+	<default-contenttype-template *ngSwitchDefault [content]="content"></default-contenttype-template>
+</div>
+
 <footer-template [content]="content"></footer-template>

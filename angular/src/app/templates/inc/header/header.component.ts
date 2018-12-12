@@ -1,8 +1,6 @@
 import { Input, Inject, Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
-import { MuraService } from '../../../../mura.service';
-import { ContentComponent } from '../../../content.component';
 
 @Component({
   selector: 'header-template',
@@ -12,5 +10,22 @@ import { ContentComponent } from '../../../content.component';
 export class HeaderComponent {
 
 	@Input() content:object;
+	primaryNav:any;
 
+	constructor() {
+		this.Mura=window.Mura;
+	}
+
+	ngOnInit(){
+		this.Mura.getFeed('content')
+		.where()
+		.prop('parentid').isEQ('00000000000000000000000000000000001')
+		.orProp('contentid').isEQ('00000000000000000000000000000000001')
+		.includeHomepage(1)
+		.sort('orderno')
+		.getQuery()
+		.then(collection=>{
+			this.primaryNav=collection.getAll().items;
+		});
+	}
 }

@@ -1,3 +1,7 @@
 <div>
-  <h2>{{content.get('title')}}</h2>
+	<ul *ngIf="primaryNav">
+		<li *ngFor="let item of primaryNav">
+	      <a href="{{item.url}}">{{item.menutitle}}</a>
+		</li>
+	</ul>
 </div>
