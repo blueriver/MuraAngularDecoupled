@@ -3,7 +3,7 @@ import {Component} from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-  <h1>Universal Demo using Mura, Angular and Angular CLI</h1>
+  <h1>Mura with Angular Decoupled Example</h1>
   <router-outlet></router-outlet>
   `,
   styles: []
