@@ -43,7 +43,7 @@ The intergration is entirely done with Mura.js installed as an npm within the an
 
 ## Mura Version
 
-You must use Mura 7.1.323 of higher
+You must use Mura 7.1.324 of higher
 
 ## NPM
 https://www.npmjs.com/package/mura.js
