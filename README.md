@@ -49,7 +49,7 @@ There is a mura.config.json file that the Mura service reads in when loading to 
 
 https://github.com/blueriver/MuraAngularDecoupled/blob/master/angular/mura.config.json
 
-You tell Mura about is as an environment variable
+You tell Mura about it as an environment variable
 
 https://github.com/blueriver/MuraAngularDecoupled/blob/master/mura/docker-compose.yml#L22
 
@@ -59,4 +59,4 @@ https://github.com/blueriver/MuraAngularDecoupled/blob/master/angular/src/app/mu
 
 # Key Points About Angular
 
-This demonstration project does not currently support prerendering or ssr. 
+This demonstration project does not currently support prerendering or ssr.
