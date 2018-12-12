@@ -1,16 +1,30 @@
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+ul.primarynav {
+	padding: 10px 16px;
+	list-style: none;
+	background-color: #eee;
 }
 
-li {
-  float: left;
+/* Display list items side by side */
+ul.primarynav li {
+	display: inline;
+	font-size: 18px;
 }
 
-li a {
-  display: block;
-  padding: 8px;
-  background-color: #dddddd;
+/* Add a slash symbol (/) before/behind each list item */
+ul.primarynav li+li:before {
+	padding: 8px;
+	color: black;
+	content: "/\00a0";
+}
+
+/* Add a color to all links inside the list */
+ul.primarynav li a {
+	color: #0275d8;
+	text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ul.primarynav li a:hover {
+	color: #01447e;
+	text-decoration: underline;
 }
