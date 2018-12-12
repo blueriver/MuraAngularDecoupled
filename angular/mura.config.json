@@ -7,7 +7,8 @@
 		"modules":{
 			"example":{
 				"name":"My Module",
-				"contenttypes":"*"
+				"contenttypes":"*",
+				"configurator":"<div>My Configurator</div>"
 			}
 		},
 	"sites":{

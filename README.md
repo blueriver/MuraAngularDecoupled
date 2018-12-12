@@ -36,3 +36,23 @@ npm run start
 You can now visit the site at http://localhost:4200
 
 And finally go to your Mura admin (http://localhost:8888/admin) and reload Mura one more to and it will see the mura.config.json from the ./angular directory.
+
+#Key Points of Integrations with Mura
+
+With this use case Mura modules, templates and content type includes are now located outside of Mura within the client.
+
+https://github.com/blueriver/MuraAngularDecoupled/tree/master/angular/src/app/contenttypes/default
+https://github.com/blueriver/MuraAngularDecoupled/tree/master/angular/src/app/templates
+https://github.com/blueriver/MuraAngularDecoupled/tree/master/angular/src/app/modules
+
+There is a mura.config.json file that the Mura service reads in when loading to get what it needs to know from the client.
+
+https://github.com/blueriver/MuraAngularDecoupled/blob/master/angular/mura.config.json
+
+You tell Mura about is as an environment variable
+
+https://github.com/blueriver/MuraAngularDecoupled/blob/master/mura/docker-compose.yml#L22
+
+Mura.js is initialize with within the mura.service file that also wires in any custom modules
+
+https://github.com/blueriver/MuraAngularDecoupled/blob/master/angular/src/app/mura.service.ts
