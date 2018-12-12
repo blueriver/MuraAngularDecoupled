@@ -41,18 +41,22 @@ And finally go to your Mura admin (http://localhost:8888/admin) and reload Mura 
 
 The intergration is entirely done with Mura.js installed as an npm within the and project
 
-NPM
+## NPM
 https://www.npmjs.com/package/mura.js
 
-Mura.js documentation
+## Mura.js documentation
+
 https://docs.getmura.com/v7-1/mura-developers/mura-rendering/murajs/
 
+## Theming
 
 With this use case Mura modules, templates and content type includes are now located outside of Mura within the client.
 
 https://github.com/blueriver/MuraAngularDecoupled/tree/master/angular/src/app/contenttypes/default
 https://github.com/blueriver/MuraAngularDecoupled/tree/master/angular/src/app/templates
 https://github.com/blueriver/MuraAngularDecoupled/tree/master/angular/src/app/modules
+
+## Configuring Mura Remotely
 
 There is a mura.config.json file that the Mura service reads in when loading to get what it needs to know from the client.
 
