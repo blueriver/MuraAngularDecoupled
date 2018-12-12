@@ -82,6 +82,12 @@ Mura.js is initialized from within the mura.service file that also wires in any 
 
 https://github.com/blueriver/MuraAngularDecoupled/blob/master/angular/src/app/mura.service.ts
 
+## Mura ORM Assembler and Scaffolder
+
+An import aspect of Mura 7.1 and this way of workin with Mura is using the Mura ORM Assembler and Scaffolder to create your own custom entities and then user Mura.js to access then within your client.  It works the same way as working with normal content and feeds.
+
+https://docs.getmura.com/v7-1/mura-developers/mura-beans-objects/custom-objects/mura-orm/mura-orm-assembler-scaffolder/
+
 # Key Points About Angular
 
 This demonstration project does not currently support prerendering or ssr.
