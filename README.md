@@ -84,7 +84,7 @@ https://github.com/blueriver/MuraAngularDecoupled/blob/master/angular/src/app/mu
 
 ## Mura ORM Assembler and Scaffolder
 
-An import aspect of Mura 7.1 and this way of workin with Mura is using the Mura ORM Assembler and Scaffolder to create your own custom entities and then user Mura.js to access then within your client.  It works the same way as working with normal content and feeds.
+An important aspect of Mura 7.1 and this way of workin with Mura is using the Mura ORM Assembler and Scaffolder to create your own custom entities and then user Mura.js to access then within your client.  It works the same way as working with normal content and feeds.
 
 https://docs.getmura.com/v7-1/mura-developers/mura-beans-objects/custom-objects/mura-orm/mura-orm-assembler-scaffolder/
 
