@@ -1,4 +1,4 @@
-import { Input Inject, Component, OnInit } from '@angular/core';
+import { Input, Inject, Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { MuraService } from '../../mura.service';
@@ -32,7 +32,7 @@ export class DefaultTemplateComponent {
 				)
 			}
 		)
-		
+
 		Mura.init(this.content.get('config'));
 		Mura('#html-queue').hide().html(this.content.get('htmlheadqueue') + this.content.get('htmlfootqueue')).show();
 	}
