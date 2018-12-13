@@ -32,7 +32,7 @@ cd {project_root}/angular
 npm install
 ```
 
-If you're on window you will need to edit this file to change "cp" to "copy"
+If you're on Windows you will need to edit this file to change "cp" to "copy"
 
 https://github.com/blueriver/MuraAngularDecoupled/blob/master/angular/package.json#L20
 
