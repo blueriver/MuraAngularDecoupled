@@ -1,4 +1,4 @@
-import { Input Inject, Component, OnInit } from '@angular/core';
+import { Input, Inject, Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { MuraService } from '../../mura.service';
