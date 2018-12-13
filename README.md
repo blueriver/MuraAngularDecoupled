@@ -88,6 +88,10 @@ An important aspect of Mura 7.1 and this new way of working with Mura is using t
 
 https://docs.getmura.com/v7-1/mura-developers/mura-beans-objects/custom-objects/mura-orm/mura-orm-assembler-scaffolder/
 
+## Mura Module Configurator Markup Conventions
+
+https://docs.getmura.com/v7-1/mura-ui-markup-conventions/custom-module-display-object-configurators/
+
 # Key Points About Angular
 
 This demonstration project does not currently support prerendering or ssr.
