@@ -1,5 +1,5 @@
-import {ChangeDetectorRef,Component,ElementRef} from '@angular/core';
-//import { MuraService } from '../mura.service';
+import {Inject, ChangeDetectorRef,Component,ElementRef} from '@angular/core';
+import { WindowRef } from '../../windowref';
 
 @Component({
   selector: 'example',
@@ -11,16 +11,15 @@ import {ChangeDetectorRef,Component,ElementRef} from '@angular/core';
 })
 
 export class ExampleComponent {
-	private context:object={myvar:"test"};
-
-	Mura:any;
-
+	private context:object={myvar:""};
+	Mura:any
 	constructor(
 		private hostElement: ElementRef,
 		private changeDetectorRef: ChangeDetectorRef,
-		//private muraService: MuraService
+		@Inject(WindowRef) private windowRef: WindowRef
 	){
-		this.Mura=window.Mura;
+
+		this.Mura=this.windowRef.nativeWindow.Mura
 
 		//This is a dynamically added component that does not support Angular life cycle events
 		setTimeout(
@@ -32,7 +31,7 @@ export class ExampleComponent {
 	}
 
 	updateContext(){
-		this.context=Mura(this.hostElement.nativeElement).closest('.mura-async-object').data()
+		this.context=this.Mura(this.hostElement.nativeElement).closest('.mura-async-object').data()
 	}
 
 	detectChanges(){

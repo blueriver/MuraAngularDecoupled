@@ -1,6 +1,7 @@
 import { Input, Inject, Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
+import { MuraService } from '../../../mura.service';
 
 @Component({
   selector: 'header-template',
@@ -9,14 +10,18 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class HeaderComponent {
 
-	@Input() content:object;
+	@Input() content:any;
 	primaryNav:any;
+	Mura:any
 
-	constructor() {
-		this.Mura=window.Mura;
+	constructor( private muraService:MuraService) {
+
 	}
 
 	ngOnInit(){
+
+		this.Mura=this.muraService.getInstance();
+
 		this.Mura.getFeed('content')
 		.where()
 		.prop('parentid').isEQ('00000000000000000000000000000000001')

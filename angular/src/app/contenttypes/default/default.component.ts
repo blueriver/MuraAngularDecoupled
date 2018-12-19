@@ -12,15 +12,18 @@ import { MuraService } from '../../mura.service';
 
 export class DefaultContentTypeTemplateComponent {
 
-	@Input() content:object;
+	@Input() content:any;
 	crumbNav:any;
+	Mura:any
 
 	constructor( private muraService:MuraService) {
 
 	}
 
 	ngOnInit() {
-		Mura('#content-body').html(	this.content.get('body'));
+		this.Mura=this.muraService.getInstance();
+
+		this.Mura('#content-body').html(	this.content.get('body'));
 
 		this.content.get('crumbs')
 		.then(collection=>{

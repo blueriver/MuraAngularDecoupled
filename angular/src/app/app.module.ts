@@ -13,6 +13,7 @@ import {HeaderComponent} from './templates/inc/header/header.component';
 import {SafePipe} from './pipes/safe.pipe';
 import {ExampleComponent} from './modules/example/example.component';
 import {DomService} from './dom.service';
+import { WindowRef } from './windowref';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import {DomService} from './dom.service';
     ]),
     TransferHttpCacheModule
   ],
-  providers: [MuraService,DomService],
+  providers: [MuraService,DomService,WindowRef],
   bootstrap: [AppComponent],
 	entryComponents:[ExampleComponent]
 })

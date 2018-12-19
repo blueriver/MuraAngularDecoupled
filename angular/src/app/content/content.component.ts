@@ -12,7 +12,8 @@ import { AlternateTemplateComponent } from '../templates/alternate/alternate.com
 })
 export class ContentComponent implements OnInit {
 
-	content:any;
+	content:any
+	Mura:any
 
   constructor(
     private route: ActivatedRoute,
@@ -23,9 +24,9 @@ export class ContentComponent implements OnInit {
 	}
 
   ngOnInit() {
-		const Mura=this.muraService.getInstance();
+		this.Mura=this.muraService.getInstance();
 
-		Mura.renderFilename(
+		this.Mura.renderFilename(
 			this.router.url.split('?')[0],
 			this.muraService.getInstance().getQueryStringParams()
 		).then(

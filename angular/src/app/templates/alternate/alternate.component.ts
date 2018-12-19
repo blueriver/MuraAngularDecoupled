@@ -11,7 +11,8 @@ import { FooterComponent } from '../inc/footer/footer.component';
   styleUrls: [ './alternate.component.css' ]
 })
 export class AlternateTemplateComponent  {
-	@Input() content:object;
+	@Input() content:any;
+	Mura:any
 
 	constructor( private muraService:MuraService) {
 
@@ -20,19 +21,21 @@ export class AlternateTemplateComponent  {
 
 	ngOnInit() {
 
-		const Mura=this.muraService.getInstance();
+		this.Mura=this.muraService.getInstance();
 
-		Mura('.mura-region-container').each(
+		this.Mura('.mura-region-container').each(
 		(region)=>{
-				region=Mura(region);
+				region=this.Mura(region);
 				region.html(
 					this.content.renderDisplayRegion(region.data('region'))
 				)
 			}
 		)
 
-		Mura('#content-body').html(	this.content.get('body'));
-		Mura.init(this.content.get('config'));
-		Mura('#html-queue').hide().html(this.content.get('htmlheadqueue') + this.content.get('htmlfootqueue')).show();
+		this.Mura('#content-body').html(	this.content.get('body'));
+
+		this.Mura.init(this.content.get('config'));
+
+		this.Mura('#html-queue').hide().html(this.content.get('htmlheadqueue') + this.content.get('htmlfootqueue')).show();
 	}
 }
