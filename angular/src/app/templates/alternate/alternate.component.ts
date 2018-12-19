@@ -36,6 +36,6 @@ export class AlternateTemplateComponent  {
 
 		this.Mura.init(this.content.get('config'));
 
-		this.Mura('#html-queue').hide().html(this.content.get('htmlheadqueue') + this.content.get('htmlfootqueue')).show();
+		this.Mura('#html-queue').html(this.content.get('htmlheadqueue') + this.content.get('htmlfootqueue'));
 	}
 }
