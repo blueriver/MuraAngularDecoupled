@@ -38,4 +38,8 @@ export class ExampleComponent {
 		this.changeDetectorRef.detectChanges();
 	}
 
+	ngOnInit() {
+		
+	}
+
 }
