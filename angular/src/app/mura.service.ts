@@ -39,17 +39,4 @@ export class MuraService {
 		return this.mura;
 	}
 
-	getRenderedContent(){
-		return this.renderedContent;
-	}
-
-
-	renderFilename(filename,params){
-		return this.mura.renderFilename(filename,params).then(
-			(rendered)=>{
-				this.renderedContent=rendered;
-				return this.getRenderedContent();
-			}
-		);
-	}
 }
