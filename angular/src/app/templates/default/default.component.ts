@@ -25,15 +25,6 @@ export class DefaultTemplateComponent {
 
 		this.Mura=this.muraService.getInstance();
 
-		this.Mura('.mura-region-container').each(
-		(region)=>{
-				region=this.Mura(region);
-				region.html(
-					this.content.renderDisplayRegion(region.data('region'))
-				)
-			}
-		)
-
 		this.Mura.init(this.content.get('config'));
 
 		this.Mura('#html-queue').html(this.content.get('htmlheadqueue') + this.content.get('htmlfootqueue'));

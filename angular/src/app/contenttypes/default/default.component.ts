@@ -25,6 +25,15 @@ export class DefaultContentTypeTemplateComponent {
 
 		this.Mura('#content-body').html(	this.content.get('body'));
 
+		this.Mura('.mura-region-container').each(
+		(region)=>{
+				region=this.Mura(region);
+				region.html(
+					this.content.renderDisplayRegion(region.data('region'))
+				)
+			}
+		)
+		
 		this.content.get('crumbs')
 		.then(collection=>{
 			this.crumbNav=collection.getAll().items.reverse();
