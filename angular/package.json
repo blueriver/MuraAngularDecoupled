@@ -46,7 +46,7 @@
     "@nguniversal/module-map-ngfactory-loader": "^6.0.0",
     "core-js": "^2.6.1",
     "express": "^4.15.2",
-    "mura.js": "^1.0.99",
+    "mura.js": "^1.0.109",
     "reflect-metadata": "^0.1.10",
     "rxjs": "^6.2.2",
     "rxjs-compat": "^6.3.3",
