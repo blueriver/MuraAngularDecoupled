@@ -33,6 +33,8 @@ export class DomService {
 
     target.appendChild(domElem);
 
+		return componentRef;
+
     // 5. Wait some time and remove it from the component tree and from the DOM
 		/*
 		setTimeout(() => {

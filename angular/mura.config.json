@@ -2,6 +2,7 @@
 	"global":{
 		"rendererProperties":{
 			"templateArray":["Default"],
+			"collectionLayoutArray":["NgCollectionLayout"],
 			"hashurls":false,
 			"primaryContentTypes":"Page,Link,File"
 		},
@@ -10,6 +11,11 @@
 				"name":"My Module",
 				"contenttypes":"*",
 				"configurator":"<div class=mura-control-group\">\r\n<label>Example Variable<\/label>\r\n<input type=\"text\" name=\"myvar\" class=\"objectParam\"\/>\r\n<\/div>"
+			},
+			"NgCollectionLayout":{
+				"name":"Collection Layout",
+				"contenttypes":"",
+				"configurator":""
 			}
 		},
 	"sites":{

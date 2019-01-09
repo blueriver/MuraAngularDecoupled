@@ -11,6 +11,7 @@ import {DefaultContentTypeTemplateComponent} from './contenttypes/default/defaul
 import {FooterComponent} from './templates/inc/footer/footer.component';
 import {HeaderComponent} from './templates/inc/header/header.component';
 import {SafePipe} from './pipes/safe.pipe';
+import {CollectionLayoutComponent} from './modules/collectionlayout/collectionlayout.component';
 import {ExampleComponent} from './modules/example/example.component';
 import {DomService} from './dom.service';
 import { WindowRef } from './windowref';
@@ -25,6 +26,7 @@ import { WindowRef } from './windowref';
 		HeaderComponent,
 		FooterComponent,
 		ExampleComponent,
+		CollectionLayoutComponent,
 		SafePipe
   ],
   imports: [
@@ -38,6 +40,6 @@ import { WindowRef } from './windowref';
   ],
   providers: [MuraService,DomService,WindowRef],
   bootstrap: [AppComponent],
-	entryComponents:[ExampleComponent]
+	entryComponents:[ExampleComponent,CollectionLayoutComponent]
 })
 export class AppModule { }
