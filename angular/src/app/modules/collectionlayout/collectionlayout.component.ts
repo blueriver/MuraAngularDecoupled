@@ -7,7 +7,7 @@ import { WindowRef } from '../../windowref';
 	<div *ngIf="this.collection">
 		<ul >
 			<li *ngFor="let item of collection.getAll().items">
-		      <a href="{{item.url}}">{{item.menutitle}}</a>
+				<a href="{{item.url}}">{{item.menutitle}}</a>
 			</li>
 		</ul>
 		<button *ngIf="this.collection.has('first')" (click)="goToPage('first')">First</button>

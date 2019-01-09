@@ -53,10 +53,6 @@ export class MuraService {
 			});
 
 		Mura.Module.NgCollectionLayout=Mura.UI.Angular.extend({
-				renderClient:function(){
-					domServiceRef.appendComponent(this.context.targetEl,this.component);
-					this.trigger('afterRender');
-				},
 				component:CollectionLayoutComponent
 			});
 
