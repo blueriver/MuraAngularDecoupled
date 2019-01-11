@@ -1,8 +1,6 @@
 FROM blueriver/muracms:latest
 MAINTAINER Matt Levine, matt.levine@blueriver.com
 
-RUN apt-get update && apt-get install -y --no-install-recommends openssh-client
-
 ARG admin_hspw=
 ARG web_hspw=
 
